@@ -10,7 +10,7 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = u'en'
 
 # About
-AVATAR = 'images/sheldonkreger.jpg'
+# AVATAR = 'images/sheldonkreger.jpg'
 ABOUT_ME = 'Web engineer, athlete, musician, lover.'
 
 # Feed generation is usually not desired when developing
