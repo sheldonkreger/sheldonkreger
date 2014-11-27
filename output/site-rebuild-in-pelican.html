@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Blog - sheldonkreger</title>
+    <title>Site Rebuild in Pelican - sheldonkreger</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,16 +10,19 @@
 
 
 
+<link rel="canonical" href="/site-rebuild-in-pelican.html">
 
-    <meta name="author" content="Sheldon Kreger" />
-    <meta name="keywords" content="Blog" />
+        <meta name="author" content="Sheldon Kreger" />
+        <meta name="description" content="I chose to rebuild sheldonkreger.com using the Python-based static HTML generator Pelican. I admit I wanted to use MonkeyMan, but it is not supported very well. While there are many great static HTML generators out there, I chose Pelican because it is widely supported, and I already know how ..." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="sheldonkreger" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="sheldonkreger"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="sheldonkreger"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Site Rebuild in Pelican"/>
+        <meta property="og:url" content="/site-rebuild-in-pelican.html"/>
+        <meta property="og:description" content="I chose to rebuild sheldonkreger.com using the Python-based static HTML generator Pelican. I admit I wanted to use MonkeyMan, but it is not supported very well. While there are many great static HTML generators out there, I chose Pelican because it is widely supported, and I already know how ..."/>
+        <meta property="article:published_time" content="2014-11-26" />
+            <meta property="article:section" content="Blog" />
+            <meta property="article:author" content="Sheldon Kreger" />
 
     <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@sheldonkreger">
@@ -68,28 +71,46 @@ sheldonkreger            </a>
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="/the-purpose-of-technology.html">The Purpose of Technology</a></h2>
-                <div class="summary"><p>Each day, millions of people spend 8 or more hours attempting to improve the technology they sell or use. Technology impacts many aspects of life, from entertainment to warfare. At times, I see the products which are being produced, and I feel as though the essence of technology has been ...</p>
-                    <a class="btn btn-default btn-xs" href="/the-purpose-of-technology.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/site-rebuild-in-pelican.html"
+                       rel="bookmark"
+                       title="Permalink to Site Rebuild in Pelican">
+                        Site Rebuild in Pelican
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-11-26T18:00:00+01:00"> Wed 26 November 2014</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/site-rebuild-in-pelican.html">Site Rebuild in Pelican</a></h2>
-                <div class="summary"><p>I chose to rebuild sheldonkreger.com using the Python-based static HTML generator Pelican. I admit I wanted to use MonkeyMan, but it is not supported very well.</p>
-<p>While there are many great static HTML generators out there, I chose Pelican because it is widely supported, and I already know how ...</p>
-                    <a class="btn btn-default btn-xs" href="/site-rebuild-in-pelican.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/strategies-for-learning-new-programming-skills.html">Strategies for Learning New Programming Skills</a></h2>
-                <div class="summary"><p>There are no shortcuts to learning a new programming or framework. Just like any other skill in life, it requires focused attention for extended periods of time. As the hours accumulate, we learn to apprroach problems in new ways. The syntax which was once foreign gradually becomes familiar. We dont ...</p>
-                    <a class="btn btn-default btn-xs" href="/strategies-for-learning-new-programming-skills.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+                <p>I chose to rebuild sheldonkreger.com using the Python-based static HTML generator Pelican. I admit I wanted to use MonkeyMan, but it is not supported very well.</p>
+<p>While there are many great static HTML generators out there, I chose Pelican because it is widely supported, and I already know how to use PIP. But, why choose a static HTML generator over a CMS like Drupal - which, after all, is my area of experise?</p>
+<ol>
+<li>CMS systems are harder to theme.</li>
+<li>The site is simple and I do not need any special functionality.</li>
+<li>Static HTML sites are very fast (espeically on GitHub Pages, using their CDN for free)!</li>
+<li>I wanted to try something new.</li>
+<li>Most importanlty - deployments with git push.</li>
+</ol>
+<p>It only took about 10 hours to put the whole thing together - and most of that time was spent fighting DNS and URL redirect settings from the previous site.</p>
+<p>If you are setting up a simple blog, I highly suggest a static HTML generator due to their simplicity. </p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
