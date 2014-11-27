@@ -1,5 +1,5 @@
 Title: The Purpose of Technology
-Date: 2014-11-26 18:00
+Date: 2014-11-26 19:00
 Category: Blog
 Tags: Science and Technology
 
