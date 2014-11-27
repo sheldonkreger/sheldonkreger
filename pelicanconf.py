@@ -23,6 +23,11 @@ AUTHOR_FEED_RSS = None
 THEME = "/Users/Skregerx/python-dev/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'yeti'
 
+#Twitter
+TWITTER_USERNAME = 'sheldonkreger'
+TWITTER_CARDS = 'true'
+TWITTER_WIDGET_ID = '537801689227481088'
+
 #Google Analytics
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-24290960-5'
 
