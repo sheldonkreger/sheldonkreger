@@ -5,12 +5,13 @@ from __future__ import unicode_literals
 AUTHOR = u'Sheldon Kreger'
 SITENAME = u'sheldonkreger'
 SITEURL = ''
-
 PATH = 'content'
-
 TIMEZONE = 'Europe/Paris'
-
 DEFAULT_LANG = u'en'
+
+# About
+AVATAR = 'images/sheldonkreger.jpg'
+ABOUT_ME = 'Web engineer, athlete, musician, lover.'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
