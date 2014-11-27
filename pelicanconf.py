@@ -45,6 +45,9 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# Plugins
+# PLUGIN_PATHS = ["plugins", "/Users/skregerx/python-dev/pelican-plugins"]
+# PLUGINS = ["assets", "liquid_tags", "sitemap"]
 #GitHub Pages CNAME Custom Domain Name
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
