@@ -21,6 +21,7 @@ AUTHOR_FEED_RSS = None
 
 #Theme
 THEME = "/Users/Skregerx/python-dev/pelican-bootstrap3"
+BOOTSTRAP_THEME = 'yeti'
 
 #Google Analytics
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-24290960-5'

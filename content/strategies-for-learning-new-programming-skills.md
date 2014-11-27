@@ -1,0 +1,23 @@
+Title: Strategies for Learning New Programming Skills
+Date: 2014-11-25 18:00
+Category: Blog
+Tags: Programming, Career
+
+There are no shortcuts to learning a new programming or framework. Just like any other skill in life, it requires focused attention for extended periods of time. As the hours accumulate, we learn to apprroach problems in new ways. The syntax which was once foreign gradually becomes familiar. We dont have to spend time looking up basic commands. When we see an error message, we know what it is trying to communicate and can quickly resolve the issue.
+
+However,  this shouldnt stop us from giving it our attention.
+
+In complex software systems, the challenges which arise are numerous and varied. Each step of the way, decisions are made which have to both interact with the current implementation and retain the path forward for features yet to come. If we look at challenges from only one perspective, we will be limited in the selections of solutions we have to choose from.
+
+For newer programmers, there is a tradeoff between developing deeper expertise in a given system (our primary system or language), and learning how to do other things. What I have done to accomodate both of these needs is to keep most of my obligations at work associated with my primary skill. I take chances to branch from that only when there is another developer leading the project who also has time to help me get up-and-running. I choose personal projects in new frameworks as well, but I
+keep them as simple as possible. If your goal is to earn more money, in most cases, it will be faster to acheive depth of a topic than if you switch between many.
+
+With so many options, it might be hard to choose which framework to learn. I suggest choosing skills which are high demand. I also suggest following the natural opportunities that arise while you are working (while you are getting paid). It is easy to overdue it and work too many unpaid hours on small projects which lead nowhere. If there is demand for a skill, there is a very good chance that an opportunity will arise naturally, and therefore you will have a chance to expand. Most likely, your
+co workers will be happy to have you help them, if you have demonstrated you can at least explain the basic architecture of an application and can show a little bit of code.
+
+When learning new frameworks, remember to save time mastering deployment and development operations (devops). A big part of building an application is setting up the development environment, managing dependencies, and configuring a production system. You do not need deep expertise, but if you can get a full application running - even a basic one - it shows that you have scaled a big part of the learning curve already.
+
+The final thing to remember is that programming is like mathematics, in regard to the learning curve. Just as a toddler is unaware that coin tosses follow specific laws, a programmer (of any age) starts off completely blind to the programming problems which organize the world around them. It is only after the concept of probability is introduced to a child that they can begin to see how dice work, why they should not play the lottery, and so on. Similarly, programmers wander with no
+perspective on how certain software systems work - or even that they exist. In additoin, they are unable to see many alternaive approaches to the problems in their own domain.
+
+A passionate programmer is one who ponders and explores systems outsider their own domain.
