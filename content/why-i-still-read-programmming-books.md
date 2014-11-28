@@ -1,6 +1,6 @@
 Title: Why I Still Read Programming Books
 Author: Sheldon Kreger
-Time: 2014-11-27 19:00
+Date: 2014-11-27 19:00
 Categoory: Blog
 Tags: Career, Science and Technology
 
