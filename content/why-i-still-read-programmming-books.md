@@ -1,7 +1,7 @@
 Title: Why I Still Read Programming Books
 Author: Sheldon Kreger
 Date: 2014-11-27 19:00
-Categoory: Blog
+Category: Blog
 Tags: Career, Programming
 
 With such an abundance of online material, why do I continue to read programming books? After all, online conotent is usually free; and buying books is expensive.
