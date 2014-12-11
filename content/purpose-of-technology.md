@@ -1,4 +1,5 @@
 Title: The Purpose of Technology
+Author: Sheldon Kreger
 Date: 2014-11-26 19:00
 Category: Blog
 Tags: Science and Technology
