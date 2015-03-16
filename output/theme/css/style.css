@@ -75,11 +75,7 @@ body {
 }
 
 a, a:hover {
-    color: 2474B5;
-}
-
-h2 a {
- color: inherit;
+    color: inherit;
 }
 
 .entry-content a {
