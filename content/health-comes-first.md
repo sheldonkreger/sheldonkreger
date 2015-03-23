@@ -14,6 +14,10 @@ There are many levels of health. Most people are happy with the level of health 
 
 I do not work long hours, except in very rare circumstances. I do not see any value in working long hours. It is not a reflection of work ethic. It is a a symptom of a deeply mis-shapen value system. Usually, it is corporate interests which are driving people to work longer hours. Give more of your soul to this machine of infinite extraction and you will eventually find yourself in a state of complete disarray.
 
+It would be easy to accuse me of being lazy. Personally, I do not care if you think I am lazy, because I know that I live in a state of well being and continuous growth - and that is much more valuable than your opinion. I am not going to bother explaining why I am not lazy, because that is also unimportant in comparison to the fact I stated above.
+
+Working hard is not a valuable goal. Acheiving health and well being is. Hard work may, sometimes, be a useful tool while following this path.
+
 Skilled athletes understand that there is a strict restriction on their work capacity. Pushing past that work capacity causes injury, and therefore has a negative impact on their athletic performance. This is true both short term and long term. World class athletes are in tune with their body and understand how far to push to gain the response they need from their training. Pushing any harder than that is worse than a waste of time. It is harmful.
 
 In some cases, an athlete can benefit from pushing, pushing HARD. This is reserved for moments of performance and competition. In some work environments, there is an appropriate time to sacrifice your time and energy. However, like an athlete, we must remember that such pushing is not the goal. The goal is sustained performance and gradual improvement over a long and happy career. I repeat, the goal is not to work hard. The goal is to acheive well being and higher levels of mastery.
