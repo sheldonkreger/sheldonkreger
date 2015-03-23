@@ -1,16 +1,20 @@
-Title: Health Comes First
+Title: Hard Work is a Tool, Not a Goal
 Author: Sheldon Kreger
 Category: Blog
 Tags: Health
 Date: 2015-03-22 12:00
 
-At times, I feel as though I am stating the obvious. But, many peoople refuse to embrace the fundamental concepts which lead to true happiness. Sometimes, I also need to give myself a reminder.
+At times, I feel as though I am stating the obvious. But, many people refuse to embrace the fundamental concepts which have lead to an authentic state of well being. It is a good place to be, and I would like more people to experience it.
 
 There is only one higher aim than attaining ideal health. This is because the quality of your health dictates the quality of the rest of your life. I will leave the most important accomplishment for another day.
 
-The first and most fundamental restriction of your body and mind is your overall state of wellbeing. Everybody has experienced at least short term illness and knows that accomplishing goals while sick is very difficult. If the illness is serious enough, your entire existence will be dedicated to fighting it off. You will make no progress on any goal outside the biological drive to continue life.
+I have watched too many of my friends fall into a cycle of endless hard work. Worse yet, they think this is a good thing. Although there are many reasons why this is destructive, the primary problem is that overworking yourself for long periods of time always harms your health.
+
+The first and most fundamental restriction of your body and mind is your overall state of well being. If you are not decently healthy and well rested, you will not attain a state of well being. Everybody has experienced at least short term illness and knows that accomplishing goals while sick is very difficult. If the illness is serious enough, your entire existence will be dedicated to fighting it off. You will make no progress on any goal outside the biological drive to continue life.
 
 There are many levels of health. Most people are happy with the level of health they need to succeed in their jobs and relationships. This is why many people are satisfied living with sub-ideal health. Restrictions in range of motion may not affect your ability to work at a desk. However, when ignored long enough, most health problems will become worse, until they actually do manifest a restriction in your lifestyle. That loss of range of motion is a step down the path to chronic pain. Happiness is more difficult to acheive in a state of continuous pain.
+
+A sure sign that you are working too hard is experience of continuous fatigue. A sustained state of fatigue will devastate your health. An authentic state of well being is not possible within a state of continuous fatigue.
 
 I do not work long hours, except in very rare circumstances. I do not see any value in working long hours. It is not a reflection of work ethic. It is a a symptom of a deeply mis-shapen value system. Usually, it is corporate interests which are driving people to work longer hours. Give more of your soul to this machine of infinite extraction and you will eventually find yourself in a state of complete disarray.
 
