@@ -25,7 +25,10 @@ Really, the best thing about the keyboard is the size.
 ###What I Dislike
 Two minor issues with this keyboard. First, the spacebar is an odd size (5.5) which means buying a standard keycap set is going to be incomplete. The spacebar simply won't fit. There is only one dealer who makes spacebars for this keyboard, and in only one profile. So the options are very limited.
 
-Second, the cord is not detachable. This means that sliding the keyboard in and out of my backpack is slighly more cumbersome. Bummer.
+Second, the cord is not detachable. This means that sliding the keyboard in and out of my backpack is slightly more cumbersome. Bummer.
+
+###Mac Compaitibliy Issues
+The keyboard does not work on OSX. It works fine on my Ubuntu Linux laptop. There are reports that you can use USB to PS2 and then a PS2 to USB adapter setup to solve the problem. I have not tried it yet.
 
 ###Conclusion
 The Choc Mini is a great choice for a portable keyboard, if you demand arrow keys and perhaps the function row.
