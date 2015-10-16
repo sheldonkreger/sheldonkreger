@@ -21,7 +21,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = "/Users/Skregerx/python-dev/pelican-bootstrap3"
+THEME = "/home/sheldon/sheldonkreger/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
