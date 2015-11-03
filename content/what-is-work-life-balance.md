@@ -1,0 +1,23 @@
+Title: What Is Work-Life Balance?
+Author: Sheldon Kreger
+Category: Blog
+Tags: Programming, Career
+Date: 2015-11-03 12:00
+
+Work-life balance is much more than having time to yourself every evening. It's more than a 40 hour workweek, and it's more than taking a few weeks of vacation every year to see your family.
+
+While a simple harmony between work and other obligations is an honorable accomplishment in American society, true work-life balance is achieved only when the worker is capable of showing their highest levels of productivity at work, and simultaneously experiencing deep joy both on and off the job.
+
+In some cases, a worker's potential is optimized by a 40 hour work week. In other cases, it could be more, or less. But, it's not the number of hours on the job that actually matter. For example, an athlete can only train for a few hours per day - the rest of their time is spent on recovery and handling nutritional needs. All of these activities contribute to the performance of the athlete and their success in their sport.
+
+Like the rest of the body, the brain needs time to recover from activity. In American culture, people often believe that the longer the work, the more they will accomplish. This might be true if you job is shoveling dirt. However, you will still run into a limit, past which you cannot shovel any more dirt without hurting yourself.
+
+Intellectual work is a bit more tricky. It's easy to fool yourself into believing that you are getting more work done, when in reality, you are just fatiguing yourself and creating more work for other people. The underlying problem is that results are difficult to measure. This is especially true in computer programming. Unlike a pile of dirt, which has clear boundaries and can objectively seen as moved, software (for example) rarely has such an easily observable state. One mistake in architecture can lead to literally years of work, where everybody believes that things are being accomplished. Each feature of the program can be checked off the list, and we can feel good about what we finished during a particular workweek. However, underlying problems which make the code unmaintainable or unusable might eventually make this software obsolete - and all the work put into it will essentially be wasted. Furthermore, shifts in priorities by a business can make even perfect software completely meaningless. This analogy extends far beyond the software world.
+
+Individual fulfillment comes as a result of a long series of good decisions. The relationship between work-life balance and personal fulfillment is inseparable. The better a person feels, the higher the quality of their work will be. The higher quality work a person does, the better they feel.
+
+Today, we run on an endless treadmill of work. Most jobs don't have a clear starting and stopping point. And, when the stopping point is reached, there is usually another task to pick up after it. Because this cycle is endless, our attitude toward it is critical. Companies which promote the use of endless force to accomplish tasks rarely create quality products, and they never retain their employees.
+
+One of the things I have noticed about intellectual work in general is that the number of hours I spend working each week has no true correlation with the amount of accomplishments I achieve. I often write more valuable code in 1 hour of my workday than in the remaining 7. What is important, however, is how I feel when I begin to work. If I feel tired, hungry, or emotionally distracted, programming is almost impossible. The brain, like any other body part, must be primed for performance. It is very easy to neglect the brain. I often ignore the first signs of hunger because I want to continue working. A half hour later, I am incapable of thinking clearly, and eating becomes even more difficult. By the time I eat and my energy is restored, I have lost an hour or more of productivity when what I should have done is taken 15 minutes to get some food when my body was ready.
+
+The state of mind I am in before I work is the only consistent variable which correlates to my productivity at work. Therefore, achieving optimal brain performance is the end-all sign of true work-life balance. A truly successful career is only possible when brain performance is prioritized.
