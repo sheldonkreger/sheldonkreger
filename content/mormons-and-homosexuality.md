@@ -2,7 +2,7 @@ Title: Mormons and Homosexuality
 Author: Sheldon Kreger
 Category: Blog
 Tags: Religion, Atheism
-Date: 2015-10-16 14:00
+Date: 2015-11-07 14:00
 
 This week, the Mormon church announced that it would discriminate against the children of same sex couples.
 
