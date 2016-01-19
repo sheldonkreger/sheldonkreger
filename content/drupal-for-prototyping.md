@@ -1,6 +1,6 @@
 Title: Drupal for Prototyping
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Drupal
 Date: 2014-12-19 12:00
 

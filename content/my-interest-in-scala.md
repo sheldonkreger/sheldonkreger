@@ -1,6 +1,6 @@
 Title: My Interest in Scala
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Career
 Date: 2014-11-29 14:00
 

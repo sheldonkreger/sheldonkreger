@@ -1,6 +1,6 @@
 Title: Mormons and Homosexuality
 Author: Sheldon Kreger
-Category: Blog
+Category: Politics
 Tags: Religion, Atheism
 Date: 2015-11-07 14:00
 

@@ -1,6 +1,6 @@
 Title: Noppoo Choc Mini Review
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Mechanical Keyboards
 Date: 2015-10-16 14:00
 

@@ -1,6 +1,6 @@
 Title: Natural Talent and Programming
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Career, Psychology
 Date: 2015-11-15 21:15
 

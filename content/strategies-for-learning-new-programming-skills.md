@@ -1,6 +1,6 @@
 Title: Strategies for Learning New Programming Skills
 Date: 2014-11-25 18:00
-Category: Blog
+Category: Programming
 Tags: Programming, Career
 
 There are no shortcuts to learning a new programming or framework. Just like any other skill in life, it requires focused attention for extended periods of time. As the hours accumulate, we learn to apprroach problems in new ways. The syntax which was once foreign gradually becomes familiar. We dont have to spend time looking up basic commands. When we see an error message, we know what it is trying to communicate and can quickly resolve the issue.

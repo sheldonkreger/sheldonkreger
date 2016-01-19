@@ -1,7 +1,7 @@
 Title: Site Rebuild in Pelican
 Date: 2014-11-26 18:00
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 
 I chose to rebuild sheldonkreger.com using the Python-based static HTML generator Pelican. I admit I wanted to use MonkeyMan, but it is not supported very well.
 
@@ -15,4 +15,4 @@ While there are many great static HTML generators out there, I chose Pelican bec
 
 It only took about 10 hours to put the whole thing together - and most of that time was spent fighting DNS and URL redirect settings from the previous site.
 
-If you are setting up a simple blog, I highly suggest a static HTML generator due to their simplicity. 
+If you are setting up a simple blog, I highly suggest a static HTML generator due to their simplicity.

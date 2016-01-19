@@ -1,6 +1,6 @@
 Title: My Interest in Elixir
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Career
 Date: 2015-11-01 14:00
 

@@ -1,6 +1,6 @@
 Title: Bad Programming Week
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming
 Date: 2015-03-15 12:00
 

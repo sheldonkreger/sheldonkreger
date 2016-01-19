@@ -1,7 +1,7 @@
 Title: Signs it is Time to Refactor
 Author: Sheldon Kreger
 Date: 2014-12-11 11:00
-Category: Blog
+Category: Programming
 Tags: Programming
 
 Software systems are expensive. After building a big application, one might hope there is a reasonable lifetime for it to live in the wild before it needs to be replaced. I have worked on sites that were implemented successfully and will have a lifetime of many years. But, especially on large systems, such success is rare. Frequently, we find ourselves reworking our code, starting the minute the initial build is finished.

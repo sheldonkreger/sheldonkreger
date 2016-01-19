@@ -1,7 +1,7 @@
 Title: The Purpose of Technology
 Author: Sheldon Kreger
 Date: 2014-11-26 19:00
-Category: Blog
+Category: Politics
 Tags: Science and Technology
 
 Each day, millions of people spend 8 or more hours attempting to improve the technology they sell or use. Technology impacts many aspects of life, from entertainment to warfare. At times, I see the products which are being produced, and I feel as though the essence of technology has been forgotten. Unfortunately, I do not think that most engineers take time to consider the reasons why people demand the technology we make, or how technology impacts culture as a whole.

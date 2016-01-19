@@ -1,6 +1,6 @@
 Title: Hard Work is a Tool, Not a Goal
 Author: Sheldon Kreger
-Category: Blog
+Category: Politics
 Tags: Health
 Date: 2015-03-22 12:00
 
@@ -30,6 +30,6 @@ The same is true in the workplace. There is nothing impressive to me about writi
 
 Obviously this concept applies outside the software world. Most industries in the current economy pretend to reward people who work harder than they should. This is nothing more than the ice cold extraction of value from your body and mind, fueling the fire of endless expansion which lives at the core of capitalism today.
 
-Every individual must decide where the boundaries of their work capacity lie. This is not aboout how much work you can do before you start making mistakes that cause more harm than good for your company. This is about how much work you can do while prioritizing your health and well being. 
+Every individual must decide where the boundaries of their work capacity lie. This is not aboout how much work you can do before you start making mistakes that cause more harm than good for your company. This is about how much work you can do while prioritizing your health and well being.
 
 There is no point in fighting the inner turmoil caused by overwork, unless you truly value the pockets of top corporate executives over your own well being. Remember, your health is more important than the relentless quest for profit. It is more important than the mass transfer of wealth to the upper class. It is more important than the unsustainable goal of endless expansion.

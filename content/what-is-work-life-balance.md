@@ -1,6 +1,6 @@
 Title: What Is Work-Life Balance?
 Author: Sheldon Kreger
-Category: Blog
+Category: Programming
 Tags: Programming, Career
 Date: 2015-11-03 12:00
 
