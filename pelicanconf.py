@@ -33,7 +33,8 @@ GOOGLE_ANALYTICS_UNIVERSAL = 'UA-24290960-5'
 
 # Blogroll
 LINKS = (('ProDrumBlog', 'http://prodrumblog.com'),
-         ('Personality Development', 'http://personality-development.org'),)
+         ('Personality Development', 'http://personality-development.org'),
+         ('Vegan Supplement Reviews', 'http://vegansupplementreviews.com'),)
 
 # Social widget
 SOCIAL = (('LinkedIn', 'https://www.linkedin.com/profile/view?id=108829656'),
