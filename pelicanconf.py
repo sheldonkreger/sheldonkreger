@@ -7,7 +7,7 @@ CWD = os.getcwd()
 AUTHOR = u'Sheldon Kreger'
 SITENAME = u'sheldonkreger'
 SITEURL = ''
-PATH = 'content'
+PATH = CWD + '/content'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = u'en'
 
@@ -23,7 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = CWD + "/pelican-bootstrap3"
+THEME = CWD +  "/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
