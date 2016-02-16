@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
+CWD = os.getcwd()
 
 AUTHOR = u'Sheldon Kreger'
 SITENAME = u'sheldonkreger'
@@ -21,7 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = "/home/sheldon/sheldonkreger/pelican-bootstrap3"
+THEME = CWD + "/pelican-bootstrap3"
 BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
