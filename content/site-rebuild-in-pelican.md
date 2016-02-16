@@ -11,7 +11,7 @@ While there are many great static HTML generators out there, I chose Pelican bec
 2. The site is simple and I do not need any special functionality.
 3. Static HTML sites are very fast (espeically on GitHub Pages, using their CDN for free)!
 4. I wanted to try something new.
-5. Most importanlty - deployments with git push.
+5. Most importantly - deployments with git push.
 
 It only took about 10 hours to put the whole thing together - and most of that time was spent fighting DNS and URL redirect settings from the previous site.
 

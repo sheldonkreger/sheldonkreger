@@ -61,10 +61,10 @@ Although I wasn't experienced enough to know why exactly, I knew from past exper
 
 Initially, I was more than hesitant to throw away nearly a year of evening study just to gamble on some hot new tool. But, what did I have to lose? My Scala adventure had led only down an eternally forking path of syntactic confusion. My code didn't actually do anything.
 
-My buddy from the aformentioned meetups happens to also run an Elixir meetup. This one is hands on, where I knew I could get help with syntax where I needed it. I had already dove into functional concepts, so that wasn't a hurdle anymore. Erlang sounded great, but the Elixir meetup was my opportunity to get help and socialize here in Portland.
+My buddy from the aforementioned meetups happens to also run an Elixir meetup. This one is hands on, where I knew I could get help with syntax where I needed it. I had already dove into functional concepts, so that wasn't a hurdle anymore. Erlang sounded great, but the Elixir meetup was my opportunity to get help and socialize here in Portland.
 
 After reading a fascinating paper comparing the JVM and BEAM, I knew that learning Erlang would at least be interesting.
 
 So, just two months ago, I picked up an Elixir book and started working through the examples. Today, I feel confident in my understanding of the primary data structures in Elixir. Furthermore, the syntax is easy for me to read. The code examples I find online almost always make sense to me right away. I can open up source code on GitHub and know which files to open. Often times, I can read the code in those files. Is this supposed to be exciting? Because I am thrilled.
 
-It is extremely refreshing to discover a language oriented around managing processes and facilitating concurrent execution. I feel like it's exactly what I was lookiing for. And, while I'm eager to dive into Erlang, Elixir has proven to be easy to read - which is a huge bonus for a person like me.
+It is extremely refreshing to discover a language oriented around managing processes and facilitating concurrent execution. I feel like it's exactly what I was looking for. And, while I'm eager to dive into Erlang, Elixir has proven to be easy to read - which is a huge bonus for a person like me.

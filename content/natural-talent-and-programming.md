@@ -6,7 +6,7 @@ Date: 2015-11-15 21:15
 
 Recently, I attended a Meetup where one of the guests brought up an interesting question. She remarked about how programmers can accomplish a lot, sometimes with less knowledge than we think we need. As fresh novices, it's hard to even know when we are ready to hit the job. This conversation led to the question of natural talent and how this affects our productivity as programmers.
 
-Giftedness is both a dark topic and happy one. On the one hand, it is comfortingto think that we might be able to master a skill faster than other people. Who wouldn't want to be gifted, in one area or another? On the other hand, it is uncomfortable to consider the reality that at least a few other people have an advantage over us - and that they will always be better than us at what we do.
+Giftedness is both a dark topic and happy one. On the one hand, it is comforting to think that we might be able to master a skill faster than other people. Who wouldn't want to be gifted, in one area or another? On the other hand, it is uncomfortable to consider the reality that at least a few other people have an advantage over us - and that they will always be better than us at what we do.
 
 This conflict is at the root of the debate about giftedness. Nature VS nurture is another classic example of a debate along the same lines. We don't want to face the fact that other people are better than us just because they won the genetic lottery; at the same time, we want to believe their are shortcuts to learning a new skill.
 
@@ -20,7 +20,7 @@ Soon, I paid more attention to what great programmers and why they had an upper 
 
 A gifted programmer doesn't necessarily produce more software or write more code than another programmer. In fact, one of their most important skills is talking people out of bad ideas before any code is ever written. That's why having a person like this on your team can have such a huge impact. If you often find yourself writing bad code as a consequence of the awful code base you are stuck with, take a look around. The great developers have already probably realized the management was bad left. Either that, or they are making a lot of money to stay and clean up somebody else's mess.
 
-Outstanding programmers choose the right tool for the job. They are not afraid of technology outside your team's core tool set. If you are lucky enough, one day you will end up on a project with nearly ideal architecture. This is likely the doing of somebody who actually knew what the hell was going on! Comparitive skills are one of the primary signs of a great developer.
+Outstanding programmers choose the right tool for the job. They are not afraid of technology outside your team's core tool set. If you are lucky enough, one day you will end up on a project with nearly ideal architecture. This is likely the doing of somebody who actually knew what the hell was going on! Comparative skills are one of the primary signs of a great developer.
 
 Great programmers still get hung up on stupid problems. I have never seen an exception to this rule. Forgot the semicolon? You bet. Tracking down a typo in a variable name for two hours? Happens all the time.
 
