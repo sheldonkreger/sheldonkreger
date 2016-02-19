@@ -1,0 +1,83 @@
+Title: The Node.js Event Loop is a Damn Mess
+Author: Sheldon Kreger
+Date: 2016-02-18 11:00
+Category: Programming
+Tags: Programming, Node.js, Asynchronous Computing
+
+### There Is No Perfect Software
+
+I must start this article by reminding everybody of my endless frustration with software engineering in general. Frustrations like those I describe below are the rule rather than the exception. Anybody familiar with my obsession with [Lacanian psychoanalysis](http://personality-development.org/theories-personality-development/jacques-lacan) understands why I don't believe in a perfect software system. This is a topic I will expand upon another day.
+
+For now, just keep in mind that I take no personal offense to these kinds of problems and I don't necessarily believe Node.js is any better/worse than anything else out there, generally speaking. Each tool we use as programmers will come with its own set of quirks and challenges; my aim here is to simply point out those I ran into with Node.js this year. Great thinkers like Lacan and Badiou have shown us that the very nature of subjectivity stands in direct opposition to our desire to create orderly systems using conscious rationality.
+
+That being said, programming languages are usually pretty good at what they are known and advertised for. My impression of Node.js, early on, was that it was optimal for handling asynchronous operations. What I discovered this year (mostly 2015) was that the features I felt I needed to cleanly handle multiple asynchronous tasks do not work well. Unlike other tools, where the more experience I gained, the more productivity I achieved - the more I used Node, the more shortcomings I ran into.
+
+Rather than an inflammatory rant, I'm hoping these lessons help others make informed decisions when they evaluate Node.js.
+
+### The Ugly Soul of Node.js
+
+The Node.js syntax itself basically forces you to utilize asynchronous callbacks. The basic idea is you instruct Node to perform some task (executing a function), take the return value for from this function, and use it as an argument to the next set of instructions in your program (another function). For example, I need to fetch a username from the database, and then pass it along to be rendered in a template file. Meanwhile, my app can continue running and grab things I need to deliver my request, like images from the file system, execute permission validation, etc. This pattern is the very soul of Node.js applications.
+
+Perhaps my first disappointment with Node.js was the notorious "callback hell." I will not explain this issue here because it is covered millions of times on other blogs. I was initially surprised that people were willing to overlook this like it's no big deal. Now, this reality leaves me downright disturbed.
+
+Apparently, this issue is too big to tackle in Node.js core, so the de-facto solution for covering it up is to use an external package to 'promisify' your code. Again, I'm not going to cover how this is done, simply look up a [tutorial on Bluebird](http://bluebirdjs.com/docs/why-promises.html) and you'll get the idea.
+
+At this point, you have been forced to alter the syntax of all your own callbacks, and forcibly apply this custom syntax to every NPM package you wish to use asynchronously. Let me me add that sometime this 'promisificaiton' doesn't work on even very popular NPM packages, for example, the most popular MySQL interface. (Perhaps this issue has been solved, but when I wrote my app, it was not).
+
+Blog posts describing promisification treat it like some kind of miracle. ["Wow, look at how much cleaner this syntax is! It's easier to read! That means my code is better!"](https://spion.github.io/posts/why-i-am-switching-to-promises.html) Nothing could be further from the truth.
+
+Assuming you are feeling OK about all this (or feeling too committed to turn back), all you have done is mask the REAL problem.
+
+### Feeling Good About Ignoring the Real Problem
+
+After becoming reliant on Bluebird, introducing complex jargon, and reworking your syntax, it's easy to feel like you've accomplished something great. After all, you learned so much!
+
+The truth, however, is that the flow of your application's logic has remained almost identical as before. Nesting asynchronous callbacks is a dangerous game to play, and many don't realize it. Let me explain.
+
+Let's say that you've built a web app with a reasonable amount of database I/O - fetching users, fetching content, validating account credentials, and so on. This is not rocket science.
+
+In this app, you chose to wrap all of your database in functions, which you then call asynchronously at runtime. For each page request your app receives, you make several independent database calls, all of which need to finish before delivering the payload back to the web browser. You are clever, and have written all of these DB calls to be non-blocking and independent of one another, so your app can do a bunch of other work while I/O takes place. Hell, you might even write unit tests and make sure your return values are valid.
+
+This sounds great, right? I mean, you've done pretty well with all that jargon, unit testing, and asynchronous implementation.
+
+One day, your app receives an unusual amount of traffic, and many pages are requested at the same time. Node.js responds by invoking a whole bunch of functions, I/O on the database. How many? NOBODY ACTUALLY KNOWS. And this is the first (of many) REAL problems that you didn't actually solve.
+
+Node.js will actually just keep issuing function calls until the call stack size is exceeded and your app falls over dead, like an overdose of Adderall. If something goes wrong inside one of your functions and the callback is never executed, guess what? Node will let the zombie process hang around for an unknown amount of time, and meanwhile, it will keep issuing new calls to the same function. In our example app, let's just imagine the DB becomes overwhelmed and stops responding. Modern DBs know that this can happen, and will block incoming requests when they are overloaded. Best case scenario, your DB starts responding again, and the end user's browser times out while trying to load your web page. Much more likely, however, your Node app keeps trying to hit the DB in an unrestrained manner, the call stack fills, and your app crashes completely. Now nobody visiting your site is getting anything.
+
+To "fix" this, you get to set timeouts on your callbacks to ensure if something goes wrong, they return. If you know that callback is going to be slow (for example, making an HTTP request to get some data from another server), then you're stuck defining a long timeout value, and again, Node will just keep hammering your function, and you'll end up filling the call stack despite applying your timeout bandage.
+
+The final issue I want to mention here is that your app will most likely have functions which occasionally return a value that you don't expect. Since there is no type safety, Node.js just takes whatever the hell your return value happens to be, then passes it along to the callback like it's no big deal.
+
+I hope you like writing conditional logic inside your functions to ensure that the arguments passed to them is valid. All those try/catch or throw/catch statements will look SUPER SEXY inside your clean, promisified callbacks. I also hope you like writing unit tests to ensure that you deal with every possibility. Because guess what? These efforts are your only mechanism of defense.
+
+### Confronting the Real Problem: The Event Loop
+
+Notice how any uncaught fatal error in a Node.js app will cause it to completely crash? There is a simple reason for this: The event loop.
+
+Imagine you are hosting a party where everybody brings their own beer. But, rather than serving it in individual bottles, you pour it all into one giant punch bowl, and everybody dips their cup into it to get their serving. This is obviously a terrible idea, because the flavor of the beer is mixed and mismatched (at best) and if one beer is contaminated, everybody goes home sick (at worst).
+
+Following this analogy, the functions in your application are the bottles of beer, and the event loop is your punch bowl. The end users, your managers, and your clients are your unfortunate guests.
+
+Each time a function returns a value and passes it to a callback, Node.js places that callback in a queue to be executed. When? Nobody knows. In fact, you have absolutely no control over when any of your callbacks are executed, aside from the `setImmediate()` and `nextTick()` wrappers, which are supposed to push a callback to the top of the execution queue, to be processed in a prioritized manner (speaking from experience, this does not work as expected). Like the punchbowl full of beer, this 'single-threaded' model doesn't make any damn sense, because if just one callback goes wrong, the whole application crashes.
+
+Even if you use utmost caution in your application, when you start interfacing with other software systems, you have no idea what kind of beer these friends are going to bring to your party.
+
+Although the execution of the app is synchronous, even PHP keeps each request in its own thread, so that when one request fails, the others remain unaffected. Today, is extremely abnormal to mix all your beer in one punchbowl. There plenty of other options for mature languages which give you various levels of control and combine async + independent request handling. This isn't rocket science.
+
+While I'm on the topic of the event loop, I want to mention how functions are handled while in-flight, as they are running and have not yet returned. V8 itself is written in C++, and it does its best to manage all of these pending functions while the event loop continuously churns through the execution queue. Exceeding the stack size is so common because there is no good way for the programmer to slow down the influx of operations from the execution queue while all these unreturned function calls are performing work.
+
+### Trying to Plug the Hose
+
+Facing this problem in my own application, I decided to try [asynchronous queues.](https://github.com/caolan/async#queue) This important tool is surprisingly unknown in the Node.js community, and it took me quite awhile to find, even asking around in IRC, Googling, StackOverflow, etc.
+
+Async queues give you a way to plug the hose on any one of your functions. The basic idea is instead of directly calling a callback, a function will instead pass the callback along to a middle manager (the queue), and the queue will pool all the pending requests to the function. Each time the function processes the invocation and returns a value, the queue is notified and it draws from its pool to execute the next pending function request.
+
+But, what happens if you pass too many requests to your async queue? Bingo! Stack size exceeded and/or memory full. Again, these pending operations are just kind of hanging out inside the call stack and/or task queue. It's like everybody is waiting to get some beer from the punch bowl, until finally there are so many people in line that the very floor of your house collapses.
+
+### Conclusion
+
+Based on the arguments outlined above, I believe JavaScript is usually not a good choice for server side applications. Although I had this 'gut feeling' from day one, I had the opportunity to dive into some Node.js projects professionally, and had a lot of fun doing so.
+
+Given Node's impressive popularity, I am surprised that I have yet to see anybody talk seriously about these problems in detail. Given that Node.js is fully intended and advertised to handle async operations, I these fundamental problems to be pretty disturbing. However, I have learned A LOT about the kinds of challenges these kinds of applications run into, and have developed a much deeper appreciation for alternative technologies in the process.
+
+I'd like to think that instead of writing angsty blog posts, they are writing code for projects like Async and Bluebird to try to handle some of these issues. What I suspect, however, is that most Node.js developers are instead writing applications without taking these issues into consideration, and hopefully learning the hard way, one bug at a time. Frankly, I don't blame them; after all, it was only after taking the time to try this myself that I realized just how deeply rooted these problems really are.
