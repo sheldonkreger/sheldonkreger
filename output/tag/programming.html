@@ -75,11 +75,11 @@ sheldonkreger            </a>
                 <h2><a href="/understanding-config-in-elixir.html">Understanding Config in Elixir</a></h2>
                 <div class="summary"><p>Elixir uses a build tool called Mix, which allows you to define static global variables for your project inside a special file called <code>config.exs</code>.</p>
 <p>A typical <code>config.exs</code> file looks something like this:</p>
-<div class="highlight"><pre><span></span>use Mix.Config
+<div class="highlight"><pre><span></span><span class="n">use</span> <span class="nv">Mix</span><span class="p">.</span><span class="nv">Config</span>
 
-config MyApp,
-  myVar: value,
-  myVar2: value2
+<span class="n">config</span> <span class="nv">MyApp</span><span class="p">,</span>
+  <span class="nn">myVar</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+  <span class="nn">myVar2</span><span class="p">:</span> <span class="n">value2</span>
 </pre></div>
 
 

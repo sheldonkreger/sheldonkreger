@@ -8,6 +8,7 @@ Elixir uses a build tool called Mix, which allows you to define static global va
 
 A typical `config.exs` file looks something like this:
 
+    :::erlang
     use Mix.Config
 
     config MyApp,
@@ -22,6 +23,7 @@ Under the hood, `config` is actually just a key/value list. You may define multi
 
 Let's assume I have an application called StatusApp. I have a file called `repo.ex` which contains a module where I set up my Ecto repository:
 
+    :::erlang
     defmodule StatusApp.Repo do
       use Ecto.Repo, otp_app: StatusApp, adapter: Ecto.Adapters.Postgres
 
@@ -33,6 +35,7 @@ Let's assume I have an application called StatusApp. I have a file called `repo.
 
 I also have a `config.exs` file:
 
+    :::erlang
     config StatusApp,
       sites: ["sheldonkreger.com", "prodrumblog.com"],
       interval: 2000

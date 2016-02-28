@@ -108,11 +108,11 @@ sheldonkreger            </a>
                 </div>
                 <p>Elixir uses a build tool called Mix, which allows you to define static global variables for your project inside a special file called <code>config.exs</code>.</p>
 <p>A typical <code>config.exs</code> file looks something like this:</p>
-<div class="highlight"><pre><span></span>use Mix.Config
+<div class="highlight"><pre><span></span><span class="n">use</span> <span class="nv">Mix</span><span class="p">.</span><span class="nv">Config</span>
 
-config MyApp,
-  myVar: value,
-  myVar2: value2
+<span class="n">config</span> <span class="nv">MyApp</span><span class="p">,</span>
+  <span class="nn">myVar</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+  <span class="nn">myVar2</span><span class="p">:</span> <span class="n">value2</span>
 </pre></div>
 
 
@@ -120,31 +120,31 @@ config MyApp,
 <p>I recently started using Ecto, which uses such configuration to define connection parameters to the database. However, since I already had configuration for some variables inside my application, I was a bit confused about how to properly add the parameters for Ecto. Do I place it all inside the MyApp config? Do I place it inside a new config called <code>EctoConfig</code>? Tough to say.</p>
 <p>Under the hood, <code>config</code> is actually just a key/value list. You may define multiple <code>configs</code>, but they are stored as a list of lists, one list for each key you define. For each key, you have another key/value list, which is the actual variables. An example will make this clear.</p>
 <p>Let's assume I have an application called StatusApp. I have a file called <code>repo.ex</code> which contains a module where I set up my Ecto repository:</p>
-<div class="highlight"><pre><span></span>defmodule StatusApp.Repo do
-  use Ecto.Repo, otp_app: StatusApp, adapter: Ecto.Adapters.Postgres
+<div class="highlight"><pre><span></span><span class="n">defmodule</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span> <span class="n">do</span>
+  <span class="n">use</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Repo</span><span class="p">,</span> <span class="nn">otp_app</span><span class="p">:</span> <span class="nv">StatusApp</span><span class="p">,</span> <span class="nn">adapter</span><span class="p">:</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Adapters</span><span class="p">.</span><span class="nv">Postgres</span>
 
-  def url do
-    &quot;ecto://postgres:postgres@localhost/sn&quot;
-  end
+  <span class="n">def</span> <span class="n">url</span> <span class="n">do</span>
+    <span class="s">&quot;ecto://postgres:postgres@localhost/sn&quot;</span>
+  <span class="k">end</span>
 
-end
+<span class="k">end</span>
 </pre></div>
 
 
 <p>I also have a <code>config.exs</code> file:</p>
-<div class="highlight"><pre><span></span>config StatusApp,
-  sites: [&quot;sheldonkreger.com&quot;, &quot;prodrumblog.com&quot;],
-  interval: 2000
+<div class="highlight"><pre><span></span><span class="n">config</span> <span class="nv">StatusApp</span><span class="p">,</span>
+  <span class="nn">sites</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;sheldonkreger.com&quot;</span><span class="p">,</span> <span class="s">&quot;prodrumblog.com&quot;</span><span class="p">],</span>
+  <span class="nn">interval</span><span class="p">:</span> <span class="mi">2000</span>
 
-config StatusApp, StatusApp.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  database: &quot;sn&quot;,
-  username: &quot;postgres&quot;,
-  password: &quot;postgres&quot;,
-  hostname: &quot;localhost&quot;
+<span class="n">config</span> <span class="nv">StatusApp</span><span class="p">,</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span><span class="p">,</span>
+  <span class="nn">adapter</span><span class="p">:</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Adapters</span><span class="p">.</span><span class="nv">Postgres</span><span class="p">,</span>
+  <span class="nn">database</span><span class="p">:</span> <span class="s">&quot;sn&quot;</span><span class="p">,</span>
+  <span class="nn">username</span><span class="p">:</span> <span class="s">&quot;postgres&quot;</span><span class="p">,</span>
+  <span class="nn">password</span><span class="p">:</span> <span class="s">&quot;postgres&quot;</span><span class="p">,</span>
+  <span class="nn">hostname</span><span class="p">:</span> <span class="s">&quot;localhost&quot;</span>
 
-config StatusApp, Foo,
-  fooVar: &quot;fooVal&quot;
+<span class="n">config</span> <span class="nv">StatusApp</span><span class="p">,</span> <span class="nv">Foo</span><span class="p">,</span>
+  <span class="nn">fooVar</span><span class="p">:</span> <span class="s">&quot;fooVal&quot;</span>
 </pre></div>
 
 
