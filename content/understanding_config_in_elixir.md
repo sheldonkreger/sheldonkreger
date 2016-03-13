@@ -21,11 +21,11 @@ I recently started using Ecto, which uses such configuration to define connectio
 
 Under the hood, `config` is actually just a key/value list. You may define multiple `configs`, but they are stored as a list of lists, one list for each key you define. For each key, you have another key/value list, which is the actual variables. An example will make this clear.
 
-Let's assume I have an application called StatusApp. I have a file called `repo.ex` which contains a module where I set up my Ecto repository:
+Let's assume I have an application called :status_app. I have a file called `repo.ex` which contains a module where I set up my Ecto repository:
 
     :::erlang
     defmodule StatusApp.Repo do
-      use Ecto.Repo, otp_app: StatusApp, adapter: Ecto.Adapters.Postgres
+      use Ecto.Repo, otp_app: :status_app, adapter: Ecto.Adapters.Postgres
 
       def url do
         "ecto://postgres:postgres@localhost/sn"
@@ -36,26 +36,26 @@ Let's assume I have an application called StatusApp. I have a file called `repo.
 I also have a `config.exs` file:
 
     :::erlang
-    config StatusApp,
+    config :status_app,
       sites: ["sheldonkreger.com", "prodrumblog.com"],
       interval: 2000
 
-    config StatusApp, StatusApp.Repo,
+    config :status_app, StatusApp.Repo,
       adapter: Ecto.Adapters.Postgres,
       database: "sn",
       username: "postgres",
       password: "postgres",
       hostname: "localhost"
 
-    config StatusApp, Foo,
+    config :status_app, Foo,
       fooVar: "fooVal"
 
 
-I like to think of `MyApp` as the top-level identifier for the `config`, and each additional `config` declaration as a separate namespace inside it.
+I like to think of `:status_app` as the top-level identifier for the `config`, and each additional `config` declaration as a separate namespace inside it. In this case, StatusApp.Repo is a module in my project.
 
-The easiest way to see what this actually looks like is to use [`Application.get_all_env(StatusApp)`:](http://elixir-lang.org/docs/stable/elixir/Application.html#get_all_env/1)
+The easiest way to see what this actually looks like is to use [`Application.get_all_env(:status_app)`:](http://elixir-lang.org/docs/stable/elixir/Application.html#get_all_env/1)
 
-`IO.inspect(Application.get_all_env(StatusApp))` returns:
+`IO.inspect(Application.get_all_env(:status_app))` returns:
 
     [{StatusApp.Repo,
       [adapter: Ecto.Adapters.Postgres, database: "sn", username: "postgres",
@@ -64,7 +64,7 @@ The easiest way to see what this actually looks like is to use [`Application.get
 
 I can access these variables using the key/value pair as an argument to [`Application.get_env()/3`:](http://elixir-lang.org/docs/stable/elixir/Application.html#get_env/3)
 
-`IO.inspect(Application.get_env(StatusApp, :sites))`
+`IO.inspect(Application.get_env(:status_app, :sites))`
 
 returns:
 
