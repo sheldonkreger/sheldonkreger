@@ -1,7 +1,7 @@
 Title: Engineers are Morally Obligated to Pursue Radical Technologies
 Author: Sheldon Kreger
 Category: Technology, Vegan
-Tags: Vegan, Environment, Ethics, Future
+Tags: Environment, Ethics, Future, Vegan
 Date: 2016-05-05 12:00
 
 Capitalism in the 21st century is premised upon limitless growth. It assumes that we can continue to expand our consumption indefinitely. Everywhere we look, we see more and more natural resources being utilized for human needs. In fact, the faster we drain the environment, the better off the economy is.
