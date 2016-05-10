@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Understanding Config in Elixir</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/politics.html">Politics</a></li>
+                    <li class="active"><a href="/category/programming.html">Programming</a></li>
+                    <li><a href="/category/technology-vegan.html">Technology, Vegan</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/understanding-config-in-elixir.html" rel="bookmark"
+           title="Permalink to Understanding Config in Elixir">Understanding Config in Elixir</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-02-28T12:00:00+00:00">
+                Published: Sun 28 February 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/sheldon-kreger.html">Sheldon Kreger</a>
+        </address>
+<p>In <a href="/category/programming.html">Programming</a>.</p>
+<p>tags: <a href="/tag/programming.html">Programming</a> <a href="/tag/elixir.html">Elixir</a> </p>
+</footer><!-- /.post-info -->      <p>Elixir uses a build tool called Mix, which allows you to define static global variables for your project inside a special file called <code>config.exs</code>.</p>
+<p>A typical <code>config.exs</code> file looks something like this:</p>
+<div class="highlight"><pre><span></span><span class="n">use</span> <span class="nv">Mix</span><span class="p">.</span><span class="nv">Config</span>
+
+<span class="n">config</span> <span class="nv">MyApp</span><span class="p">,</span>
+  <span class="nn">myVar</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+  <span class="nn">myVar2</span><span class="p">:</span> <span class="n">value2</span>
+</pre></div>
+
+
+<p>Inside your application, we then load the variables using a function called <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_env/3"><code>Application.get_env()/3</code>.</a> This allows us to access the static variables as we desire.</p>
+<p>I recently started using Ecto, which uses such configuration to define connection parameters to the database. However, since I already had configuration for some variables inside my application, I was a bit confused about how to properly add the parameters for Ecto. Do I place it all inside the MyApp config? Do I place it inside a new config called <code>EctoConfig</code>? Tough to say.</p>
+<p>Under the hood, <code>config</code> is actually just a key/value list. You may define multiple <code>configs</code>, but they are stored as a list of lists, one list for each key you define. For each key, you have another key/value list, which is the actual variables. An example will make this clear.</p>
+<p>Let's assume I have an application called :status_app. I have a file called <code>repo.ex</code> which contains a module where I set up my Ecto repository:</p>
+<div class="highlight"><pre><span></span><span class="n">defmodule</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span> <span class="n">do</span>
+  <span class="n">use</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Repo</span><span class="p">,</span> <span class="nn">otp_app</span><span class="p">:</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span> <span class="nn">adapter</span><span class="p">:</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Adapters</span><span class="p">.</span><span class="nv">Postgres</span>
+
+  <span class="n">def</span> <span class="n">url</span> <span class="n">do</span>
+    <span class="s">&quot;ecto://postgres:postgres@localhost/sn&quot;</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+
+<p>I also have a <code>config.exs</code> file:</p>
+<div class="highlight"><pre><span></span><span class="n">config</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span>
+  <span class="nn">sites</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;sheldonkreger.com&quot;</span><span class="p">,</span> <span class="s">&quot;prodrumblog.com&quot;</span><span class="p">],</span>
+  <span class="nn">interval</span><span class="p">:</span> <span class="mi">2000</span>
+
+<span class="n">config</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span><span class="p">,</span>
+  <span class="nn">adapter</span><span class="p">:</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Adapters</span><span class="p">.</span><span class="nv">Postgres</span><span class="p">,</span>
+  <span class="nn">database</span><span class="p">:</span> <span class="s">&quot;sn&quot;</span><span class="p">,</span>
+  <span class="nn">username</span><span class="p">:</span> <span class="s">&quot;postgres&quot;</span><span class="p">,</span>
+  <span class="nn">password</span><span class="p">:</span> <span class="s">&quot;postgres&quot;</span><span class="p">,</span>
+  <span class="nn">hostname</span><span class="p">:</span> <span class="s">&quot;localhost&quot;</span>
+
+<span class="n">config</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span> <span class="nv">Foo</span><span class="p">,</span>
+  <span class="nn">fooVar</span><span class="p">:</span> <span class="s">&quot;fooVal&quot;</span>
+</pre></div>
+
+
+<p>I like to think of <code>:status_app</code> as the top-level identifier for the <code>config</code>, and each additional <code>config</code> declaration as a separate namespace inside it. In this case, StatusApp.Repo is a module in my project.</p>
+<p>The easiest way to see what this actually looks like is to use <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_all_env/1"><code>Application.get_all_env(:status_app)</code>:</a></p>
+<p><code>IO.inspect(Application.get_all_env(:status_app))</code> returns:</p>
+<div class="highlight"><pre><span></span>[{StatusApp.Repo,
+  [adapter: Ecto.Adapters.Postgres, database: &quot;sn&quot;, username: &quot;postgres&quot;,
+   password: &quot;postgres&quot;, hostname: &quot;localhost&quot;]}, {Foo, [foo: &quot;fooVal&quot;]},
+ {:sites, [&quot;sheldonkreger.com&quot;, &quot;prodrumblog.com&quot;]}, {:interval, 2000}]
+</pre></div>
+
+
+<p>I can access these variables using the key/value pair as an argument to <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_env/3"><code>Application.get_env()/3</code>:</a></p>
+<p><code>IO.inspect(Application.get_env(:status_app, :sites))</code></p>
+<p>returns:</p>
+<p><code>["sheldonkreger.com", "prodrumblog.com"]</code></p>
+<p>We can give it just two arguments because it will default to the top-level list when we don't specify the <code>key</code>.</p>
+<p>To drill down to <code>Foo</code>, we use <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_env/3"><code>Application.get_env()/3</code>:</a></p>
+<p><code>IO.inspect(Application.get_env(StatusApp, Foo, :fooVar)</code></p>
+<p>Which returns:</p>
+<p><code>[fooVar: "fooVal"]</code></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
