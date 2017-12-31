@@ -23,8 +23,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = CWD +  "/pelican-bootstrap3"
-BOOTSTRAP_THEME = 'yeti'
+THEME = "/home/sheldonkreger/pelican-themes/pelican-blueidea"
+#BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
 TWITTER_USERNAME = 'sheldonkreger'
@@ -35,13 +35,13 @@ GOOGLE_ANALYTICS_UNIVERSAL = 'UA-24290960-5'
 
 # Blogroll
 LINKS = (('ProDrumBlog', 'http://prodrumblog.com'),
-         ('Personality Development', 'http://personality-development.org'),
-         ('Vegan Supplement Reviews', 'http://vegansupplementreviews.com'),)
+         ('Personality Development', 'http://personality-development.org'),)
 
 # Social widget
 SOCIAL = (('LinkedIn', 'https://www.linkedin.com/profile/view?id=108829656'),
           ('Twitter', 'https://twitter.com/sheldonkreger'),
-          ('Google Plus', 'https://plus.google.com/u/0/+SheldonKreger/posts'),)
+          ('Google Plus', 'https://plus.google.com/u/0/+SheldonKreger/posts'),
+          ('YouTube', 'https://www.youtube.com/sheldonkreger'))
 
 DEFAULT_PAGINATION = 10
 
@@ -49,8 +49,8 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # Plugins
-# PLUGIN_PATHS = ["plugins", "/Users/skregerx/python-dev/pelican-plugins"]
-# PLUGINS = ["assets", "liquid_tags", "sitemap"]
+PLUGIN_PATHS = ["plugins", "/home/sheldonkreger/pelican-plugins"]
+
 #GitHub Pages CNAME Custom Domain Name
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
