@@ -16,7 +16,7 @@
                 <nav><ul>
                     <li><a href="/category/politics.html">Politics</a></li>
                     <li class="active"><a href="/category/programming.html">Programming</a></li>
-                    <li><a href="/category/technology.html">Technology</a></li>
+                    <li><a href="/category/technology-vegan.html">Technology, Vegan</a></li>
                 </ul>
                 </nav>
         </header><!-- /#banner -->
@@ -35,7 +35,7 @@
 <span>| tags: <a href="/tag/programming.html">Programming</a><a href="/tag/elixir.html">Elixir</a></span>
 </footer><!-- /.post-info -->      <p>Elixir uses a build tool called Mix, which allows you to define static global variables for your project inside a special file called <code>config.exs</code>.</p>
 <p>A typical <code>config.exs</code> file looks something like this:</p>
-<div class="highlight"><pre><span></span><span class="n">use</span> <span class="nv">Mix</span><span class="p">.</span><span class="nv">Config</span>
+<div class="highlight"><pre><span class="n">use</span> <span class="nv">Mix</span><span class="p">.</span><span class="nv">Config</span>
 
 <span class="n">config</span> <span class="nv">MyApp</span><span class="p">,</span>
   <span class="nn">myVar</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
@@ -47,7 +47,7 @@
 <p>I recently started using Ecto, which uses such configuration to define connection parameters to the database. However, since I already had configuration for some variables inside my application, I was a bit confused about how to properly add the parameters for Ecto. Do I place it all inside the MyApp config? Do I place it inside a new config called <code>EctoConfig</code>? Tough to say.</p>
 <p>Under the hood, <code>config</code> is actually just a key/value list. You may define multiple <code>configs</code>, but they are stored as a list of lists, one list for each key you define. For each key, you have another key/value list, which is the actual variables. An example will make this clear.</p>
 <p>Let's assume I have an application called :status_app. I have a file called <code>repo.ex</code> which contains a module where I set up my Ecto repository:</p>
-<div class="highlight"><pre><span></span><span class="n">defmodule</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span> <span class="n">do</span>
+<div class="highlight"><pre><span class="n">defmodule</span> <span class="nv">StatusApp</span><span class="p">.</span><span class="nv">Repo</span> <span class="n">do</span>
   <span class="n">use</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Repo</span><span class="p">,</span> <span class="nn">otp_app</span><span class="p">:</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span> <span class="nn">adapter</span><span class="p">:</span> <span class="nv">Ecto</span><span class="p">.</span><span class="nv">Adapters</span><span class="p">.</span><span class="nv">Postgres</span>
 
   <span class="n">def</span> <span class="n">url</span> <span class="n">do</span>
@@ -59,7 +59,7 @@
 
 
 <p>I also have a <code>config.exs</code> file:</p>
-<div class="highlight"><pre><span></span><span class="n">config</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span>
+<div class="highlight"><pre><span class="n">config</span> <span class="p">:</span><span class="n">status_app</span><span class="p">,</span>
   <span class="nn">sites</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;sheldonkreger.com&quot;</span><span class="p">,</span> <span class="s">&quot;prodrumblog.com&quot;</span><span class="p">],</span>
   <span class="nn">interval</span><span class="p">:</span> <span class="mi">2000</span>
 
@@ -78,7 +78,7 @@
 <p>I like to think of <code>:status_app</code> as the top-level identifier for the <code>config</code>, and each additional <code>config</code> declaration as a separate namespace inside it. In this case, StatusApp.Repo is a module in my project.</p>
 <p>The easiest way to see what this actually looks like is to use <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_all_env/1"><code>Application.get_all_env(:status_app)</code>:</a></p>
 <p><code>IO.inspect(Application.get_all_env(:status_app))</code> returns:</p>
-<div class="highlight"><pre><span></span>[{StatusApp.Repo,
+<div class="highlight"><pre>[{StatusApp.Repo,
   [adapter: Ecto.Adapters.Postgres, database: &quot;sn&quot;, username: &quot;postgres&quot;,
    password: &quot;postgres&quot;, hostname: &quot;localhost&quot;]}, {Foo, [foo: &quot;fooVal&quot;]},
  {:sites, [&quot;sheldonkreger.com&quot;, &quot;prodrumblog.com&quot;]}, {:interval, 2000}]
