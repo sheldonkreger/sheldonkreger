@@ -23,7 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = "/home/sheldonkreger/pelican-themes/pelican-blueidea"
+THEME = "/home/sheldon/pelican_themes/pelican-blueidea"
 #BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
