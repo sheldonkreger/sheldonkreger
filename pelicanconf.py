@@ -13,7 +13,7 @@ DEFAULT_LANG = u'en'
 
 # About
 # AVATAR = 'images/sheldonkreger.jpg'
-ABOUT_ME = 'Web engineer, athlete, musician, lover.'
+ABOUT_ME = 'Engineer, musician, athlete.'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -23,7 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #Theme
-THEME = "/home/sheldon/pelican_themes/pelican-blueidea"
+THEME = "/home/sheldonkreger/pelican-blueidea"
 #BOOTSTRAP_THEME = 'yeti'
 
 #Twitter
@@ -34,14 +34,12 @@ TWITTER_CARDS = 'true'
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-24290960-5'
 
 # Blogroll
-LINKS = (('ProDrumBlog', 'http://prodrumblog.com'),
-         ('Personality Development', 'http://personality-development.org'),)
+LINKS = (('Big Data, Big Issues Podcast', 'https://bigdatabigissues.com'),
+         ('Drum Cover YouTube Channel', 'https://www.youtube.com/channel/UCxg5gbf2BQpmzzlOetwhszg'))
 
 # Social widget
 SOCIAL = (('LinkedIn', 'https://www.linkedin.com/profile/view?id=108829656'),
-          ('Twitter', 'https://twitter.com/sheldonkreger'),
-          ('Google Plus', 'https://plus.google.com/u/0/+SheldonKreger/posts'),
-          ('YouTube', 'https://www.youtube.com/sheldonkreger'))
+          ('Twitter', 'https://twitter.com/sheldonkreger'))
 
 DEFAULT_PAGINATION = 10
 
